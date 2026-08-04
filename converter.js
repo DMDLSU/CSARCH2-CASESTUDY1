@@ -1,6 +1,6 @@
 //Function for converting to unsigned binary
 function unsigned(number, bits) {
-    let max = (2n ** BigInt(bits)) -1; //determines max possible bit for given number
+    let max = (2n ** BigInt(bits)) -1n; //determines max possible bit for given number
 
     if (number < 0n) {
         return "Error: Unsigned numbers cannot be negative";
