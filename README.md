@@ -35,6 +35,8 @@ Decimal to Unsigned Binary
 | Special Case | -67   | 8    | Error: Cannot be negative  | Error     | P   |
 | Error Case   | 12345 | 4    | Error: Number is too large | Error     | P   |
 
+![Normal Case](CSARCH2 - CS1 - Screenshots/Unsigned1.png)
+
 Decimal to Signed Binary
 
 | Test Case    | Input | Bits | Output                     | Expected  | P/F |
