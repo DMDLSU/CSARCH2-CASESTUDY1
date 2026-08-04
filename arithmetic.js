@@ -46,6 +46,19 @@ function sequentialMultiply(multiplicandInput, multiplierInput, bits) {
     var multiplicand = parseOperand(multiplicandInput, bits);
     var multiplier = parseOperand(multiplierInput, bits);
 
+
+    var maxUnsigned = (1n << BigInt(bits)) - 1n;
+
+    if (multiplicand < 0n || multiplicand > maxUnsigned) {
+        console.log("Error: Multiplicand does not fit in " + bits + " bits.");
+        return;
+    }
+    
+    if (multiplier < 0n || multiplier > maxUnsigned) {
+        console.log("Error: Multiplier does not fit in " + bits + " bits.");
+        return;
+    }
+    
     var n = bits;
     var nBig = BigInt(n);
     var mask = (1n << nBig) - 1n;
@@ -97,6 +110,18 @@ function sequentialMultiply(multiplicandInput, multiplierInput, bits) {
 function nonRestoringDivide(dividendInput, divisorInput, bits) {
     var dividend = parseOperand(dividendInput, bits);
     var divisor = parseOperand(divisorInput, bits);
+
+    var maxUnsigned = (1n << BigInt(bits)) - 1n;
+
+    if (dividend < 0n || dividend > maxUnsigned) {
+        console.log("Error: Dividend does not fit in " + bits + " bits.");
+        return;
+    }
+    
+    if (divisor < 0n || divisor > maxUnsigned) {
+        console.log("Error: Divisor does not fit in " + bits + " bits.");
+        return;
+    }
 
     if (divisor === 0n) {
         console.log("Error: Division by zero");
