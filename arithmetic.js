@@ -17,10 +17,34 @@ function getMinSignedBits(value) {
     return (-value).toString(2).length + 1;
 }
 
+//Parses inputs seperately for multiplication and division to handle binary and decimal inputs
+function parseOperand(inputStr, bits) {
+    if (typeof inputStr !== 'string') {
+        return BigInt(inputStr);
+    }
+
+    let str = inputStr.trim();
+
+    if (str.toLowerCase().startsWith('0b')) {
+        return BigInt(str);
+    }
+
+    if (/^[01]+$/.test(str)) {
+        let decimalVal = BigInt(str);
+        let maxUnsignedForBits = (2n ** BigInt(bits)) - 1n;
+
+        if ((str.startsWith('0') && str.length > 1) || decimalVal > maxUnsignedForBits) {
+            return BigInt("0b" + str);
+        }
+    }
+
+
+    return BigInt(str);
+}
+
 function sequentialMultiply(multiplicandInput, multiplierInput, bits) {
-    var isBinary = typeof multiplicandInput === 'string' && /^[01]+$/.test(multiplicandInput);
-    var multiplicand = isBinary ? BigInt("0b" + multiplicandInput) : BigInt(multiplicandInput);
-    var multiplier = isBinary ? BigInt("0b" + multiplierInput) : BigInt(multiplierInput);
+    var multiplicand = parseOperand(multiplicandInput, bits);
+    var multiplier = parseOperand(multiplierInput, bits);
 
     var n = bits;
     var nBig = BigInt(n);
@@ -71,9 +95,8 @@ function sequentialMultiply(multiplicandInput, multiplierInput, bits) {
 }
 
 function nonRestoringDivide(dividendInput, divisorInput, bits) {
-    var isBinary = typeof dividendInput === 'string' && /^[01]+$/.test(dividendInput);
-    var dividend = isBinary ? BigInt("0b" + dividendInput) : BigInt(dividendInput);
-    var divisor = isBinary ? BigInt("0b" + divisorInput) : BigInt(divisorInput);
+    var dividend = parseOperand(dividendInput, bits);
+    var divisor = parseOperand(divisorInput, bits);
 
     if (divisor === 0n) {
         console.log("Error: Division by zero");
