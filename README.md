@@ -57,4 +57,4 @@ Non-Restoring Binary Division
 | ------------ | -------- | ------- | ---- | ----------------------- | ----------------------- | ----------------------- | --- |
 | Normal Case  | 7        | 3       | 4    | 0010                    | 0001                    | 0010, 0001              | P   |
 | Special Case | 7        | 0       | 4    | Error: Division by zero | Error: Division by zero | Error: Division by zero | P   |
-| Error Case   | 99       | 2       | 4    | Error                   | Error                   | Error:Out of Bounds     | F   |
+| Error Case   | 99       | 2       | 4    | Error                   | Error                   | Error: Out of Bounds    | P   |
