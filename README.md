@@ -43,3 +43,17 @@ Decimal to Signed Binary
 | Special Case | -67   | 8    | 10111101                   | 10111101  | P   |
 | Error Case   | 12345 | 4    | Error: Number is too large | Error     | P   |
 
+Sequential Binary Multiplication
+
+| Test Case    | Multiplicand | Multiplier | Bits | Output   | Expected      | P/F |
+| ------------ | ------------ | ---------- | ---- | -------- | ------------- | --- |
+| Normal Case  | 6            | 3          | 4    | 00010010 | 00010010      | P   |
+| Special Case | 6            | 0          | 4    | 00000000 | 00000000      | P   |
+| Error Case   | 100          | 2          | 4    | 00001000 | Out of Bounds | F   |
+Non-Restoring Binary Division
+
+| Test Case    | Dividend | Divisor | Bits | Output                  | Remainder               | Expected                | P/F |
+| ------------ | -------- | ------- | ---- | ----------------------- | ----------------------- | ----------------------- | --- |
+| Normal Case  | 7        | 3       | 4    | 0010                    | 0001                    | 0010, 0001              | P   |
+| Special Case | 7        | 0       | 4    | Error: Division by zero | Error: Division by zero | Error: Division by zero | P   |
+| Error Case   | 100      | 2       | 4    | 0010                    | 0000                    | Out of Bounds           | F   |
