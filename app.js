@@ -78,12 +78,23 @@ function runArithmetic() {
 
 function runConverter() {
     const type = document.getElementById('convType').value;
-    const input = parseInt(document.getElementById('convInput').value);
     const bits = parseInt(document.getElementById('convBits').value);
     const outputBox = document.getElementById('output');
+    const inputText = document.getElementById('convInput').value.trim();
+    
 
-    if (isNaN(input) || isNaN(bits)) {
-        outputBox.textContent = 'Please enter a valid number and bits.';
+    if (inputText === '' || isNaN(bits)) {
+    outputBox.textContent = 'Please enter a valid number and bits.';
+        return;
+    }
+    
+    let input;
+    
+    try {
+        input = BigInt(inputText);
+    }
+    catch {
+        outputBox.textContent = 'Please enter a valid integer.';
         return;
     }
 
