@@ -60,7 +60,7 @@ Sequential Binary Multiplication
 | Error Case   | 99           | 2          | 4    | Error    | Error: Out of Bounds | P   |
 
 [Normal Case] - https://github.com/DMDLSU/CSARCH2-CASESTUDY1/blob/main/CSARCH2%20-%20CS1%20-%20Screenshots/Mult1.png
-[Special Case] - https://github.com/DMDLSU/CSARCH2-CASESTUDY1/blob/main/CSARCH2%20-%20CS1%20-%20Screenshots/Mult2.png
+[Special Case] - https://github.com/DMDLSU/CSARCH2-CASESTUDY1/blob/main/CSARCH2%20-%20CS1%20-%20Screenshots/Mult2.png             
 [Error Case] - https://github.com/DMDLSU/CSARCH2-CASESTUDY1/blob/main/CSARCH2%20-%20CS1%20-%20Screenshots/Mult3.png
 
 Non-Restoring Binary Division
@@ -72,5 +72,5 @@ Non-Restoring Binary Division
 | Error Case   | 99       | 2       | 4    | Error                   | Error                   | Error: Out of Bounds    | P   |
 
 [Normal Case] - https://github.com/DMDLSU/CSARCH2-CASESTUDY1/blob/main/CSARCH2%20-%20CS1%20-%20Screenshots/Div1.png
-[Special Case] - https://github.com/DMDLSU/CSARCH2-CASESTUDY1/blob/main/CSARCH2%20-%20CS1%20-%20Screenshots/Div2.png
+[Special Case] - https://github.com/DMDLSU/CSARCH2-CASESTUDY1/blob/main/CSARCH2%20-%20CS1%20-%20Screenshots/Div2.png              
 [Error Case] - https://github.com/DMDLSU/CSARCH2-CASESTUDY1/blob/main/CSARCH2%20-%20CS1%20-%20Screenshots/Div3.png
