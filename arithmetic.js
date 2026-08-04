@@ -148,6 +148,3 @@ function nonRestoringDivide(dividendInput, divisorInput, bits) {
     console.log("Final Remainder (Decimal): " + A.toString());
     console.log("\n");
 }
-
-nonRestoringDivide("1011", "0011", 4);
-sequentialMultiply("1100", "1101", 4);
