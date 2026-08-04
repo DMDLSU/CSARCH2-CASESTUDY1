@@ -45,11 +45,11 @@ Decimal to Signed Binary
 
 Sequential Binary Multiplication
 
-| Test Case    | Multiplicand | Multiplier | Bits | Output   | Expected      | P/F |
-| ------------ | ------------ | ---------- | ---- | -------- | ------------- | --- |
-| Normal Case  | 6            | 3          | 4    | 00010010 | 00010010      | P   |
-| Special Case | 6            | 0          | 4    | 00000000 | 00000000      | P   |
-| Error Case   | 100          | 2          | 4    | 00001000 | Out of Bounds | F   |
+| Test Case    | Multiplicand | Multiplier | Bits | Output   | Expected             | P/F |
+| ------------ | ------------ | ---------- | ---- | -------- | ---------------------| --- |
+| Normal Case  | 6            | 3          | 4    | 00010010 | 00010010             | P   |
+| Special Case | 6            | 0          | 4    | 00000000 | 00000000             | P   |
+| Error Case   | 99           | 2          | 4    | Error    | Error: Out of Bounds | P   |
 
 Non-Restoring Binary Division
 
@@ -57,4 +57,4 @@ Non-Restoring Binary Division
 | ------------ | -------- | ------- | ---- | ----------------------- | ----------------------- | ----------------------- | --- |
 | Normal Case  | 7        | 3       | 4    | 0010                    | 0001                    | 0010, 0001              | P   |
 | Special Case | 7        | 0       | 4    | Error: Division by zero | Error: Division by zero | Error: Division by zero | P   |
-| Error Case   | 100      | 2       | 4    | 0010                    | 0000                    | Out of Bounds           | F   |
+| Error Case   | 99       | 2       | 4    | Error                   | Error                   | Error:Out of Bounds     | F   |
