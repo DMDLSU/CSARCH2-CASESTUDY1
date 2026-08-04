@@ -25,4 +25,21 @@ This Machine has two main functions. The first function converts a user input de
 
 ## Analysis Write-up
 
+## Test Cases
+### Conversion
+Decimal to Unsigned Binary
+
+| Test Case    | Input | Bits | Output                     | Expected  | P/F |
+| ------------ | ----- | ---- | -------------------------- | --------- | --- |
+| Normal Case  | 67    | 8    | 01000011                   | 01000011  | P   |
+| Special Case | -67   | 8    | Error: Cannot be negative  | Error     | P   |
+| Error Case   | 12345 | 4    | Error: Number is too large | Error     | P   |
+
+Decimal to Signed Binary
+
+| Test Case    | Input | Bits | Output                     | Expected  | P/F |
+| ------------ | ----- | ---- | -------------------------- | --------- | --- |
+| Normal Case  | 67    | 8    | 01000011                   | 01000011  | P   |
+| Special Case | -67   | 8    | 10111101                   | 10111101  | P   |
+| Error Case   | 12345 | 4    | Error: Number is too large | Error     | P   |
 
