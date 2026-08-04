@@ -50,6 +50,7 @@ Sequential Binary Multiplication
 | Normal Case  | 6            | 3          | 4    | 00010010 | 00010010      | P   |
 | Special Case | 6            | 0          | 4    | 00000000 | 00000000      | P   |
 | Error Case   | 100          | 2          | 4    | 00001000 | Out of Bounds | F   |
+
 Non-Restoring Binary Division
 
 | Test Case    | Dividend | Divisor | Bits | Output                  | Remainder               | Expected                | P/F |
