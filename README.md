@@ -22,7 +22,7 @@ This Machine has two main functions. The first function converts a user input de
 ## Website Deployment Link
 https://dmdlsu.github.io/CSARCH2-CASESTUDY1/
 ## Video Walkthrough
-
+https://www.youtube.com/watch?v=QB8nJ8gTfqc
 ## Analysis Write-up
 
 ## Test Cases
